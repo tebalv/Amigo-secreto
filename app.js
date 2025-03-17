@@ -3,13 +3,43 @@ let sorteoRealizado = 0
 let primerLugar = ""
 let segundoLugar = ""
 
+function mostrarPopup(mensaje, tipo = "info") { //Función para los popup con sus respectivas construcciones
+  const overlay = document.createElement("div")
+  overlay.className = "popup-overlay"
+
+  const popupContainer = document.createElement("div")
+  popupContainer.className = `popup-container popup-${tipo}`
+
+  const popupContent = document.createElement("div")
+  popupContent.className = "popup-content"
+
+  const mensajeElement = document.createElement("p")
+  mensajeElement.textContent = mensaje
+
+  const closeButton = document.createElement("button")
+  closeButton.className = "popup-close-button"
+  closeButton.textContent = "Aceptar"
+
+  closeButton.addEventListener("click", () => {
+    document.body.removeChild(overlay)
+  })
+
+  popupContent.appendChild(mensajeElement)
+  popupContent.appendChild(closeButton)
+  popupContainer.appendChild(popupContent)
+  overlay.appendChild(popupContainer)
+
+  document.body.appendChild(overlay)
+
+  closeButton.focus()
+}
 function agregarAmigo() { //Función para agregar un amigo a la lista
 
   const inputAmigo = document.getElementById("amigo")
   const nombreAmigo = inputAmigo.value.trim()
 
   if (nombreAmigo === "") {    // Validamos que el campo no esté vacío
-    alert("Por favor, inserte un nombre.")
+    mostrarPopup("Por favor, inserte un nombre.", "warning")
     return
   }
 
@@ -62,7 +92,7 @@ function actualizarListaAmigos() { //Actualiza la lista en el html
 
 function sortearAmigo() { //Función para sortear con random
     if (amigos.length < 5) {
-      alert("Debe agregar al menos 5 participantes para realizar el sorteo.")
+      mostrarPopup("Debe agregar al menos 5 participantes para realizar el sorteo.", "warning")
       return
     }
   
@@ -70,7 +100,7 @@ function sortearAmigo() { //Función para sortear con random
   
     
     if (sorteoRealizado >= 2) { // Verificamos si ya se han realizado los dos sorteos
-      alert("Ya no hay premios para sortear. Por favor, reinicie el sorteo para comenzar de nuevo.")
+      mostrarPopup("Ya no hay premios para sortear. Por favor, reinicie el sorteo para comenzar de nuevo.", "error")
       return
     }
       
@@ -89,12 +119,16 @@ function sortearAmigo() { //Función para sortear con random
       listaResultado.innerHTML = `
         <li class="resultado-primer-lugar">¡${amigoSeleccionado} ha ganado el PRIMER LUGAR!</li>
       `
+      mostrarPopup(`¡${amigoSeleccionado} ha ganado el PRIMER LUGAR!`, "success")
+
     } else {
       segundoLugar = amigoSeleccionado
       listaResultado.innerHTML = `
         <li class="resultado-primer-lugar">Primer lugar: ${primerLugar}</li>
         <li class="resultado-segundo-lugar">Segundo lugar: ${amigoSeleccionado}</li>
       `
+      mostrarPopup(`¡${amigoSeleccionado} ha ganado el SEGUNDO LUGAR!`, "success")
+
     }
   }
   
@@ -108,6 +142,8 @@ function sortearAmigo() { //Función para sortear con random
     const listaResultado = document.getElementById("resultado")
     listaResultado.innerHTML = ""  
     document.getElementById("amigo").focus()
+    mostrarPopup("El sorteo ha sido reiniciado correctamente.", "info") // Mensaje de confirmación
+
   }
   
   document.getElementById("amigo").addEventListener("keypress", (event) => { //Evento para poder agregar amigos con el "Enter"

@@ -298,6 +298,8 @@
     max-width: 400px;
     overflow: hidden;
     animation: popup-appear 0.3s ease-out;
+    border-top: 5px solid var(--color-primary);
+
   }
   
   @keyframes popup-appear {
@@ -339,52 +341,52 @@
   }
   
   .popup-success {
-    border-top: 5px solid var(--color-success);
+    border-top: 5px solid var(--color-primary);
   }
   
   .popup-success .popup-close-button {
-    background-color: var(--color-success);
+    background-color: var(--color-primary);
   }
   
   .popup-success .popup-close-button:hover {
-    background-color: #218838;
+    background-color: #2d4a7d;
   }
   
   .popup-warning {
-    border-top: 5px solid var(--color-warning);
+    border-top: 5px solid var(--color-primary);
   }
   
   .popup-warning .popup-close-button {
-    background-color: var(--color-warning);
-    color: var(--color-text);
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
   
   .popup-warning .popup-close-button:hover {
-    background-color: #e0a800;
+    background-color: #2d4a7d;
   }
   
   .popup-error {
-    border-top: 5px solid var(--color-danger);
+    border-top: 5px solid var(--color-primary);
   }
   
   .popup-error .popup-close-button {
-    background-color: var(--color-danger);
+    background-color: var(--color-primary);
   }
   
   .popup-error .popup-close-button:hover {
-    background-color: #c82333;
+    background-color: #2d4a7d;
   }
   
   .popup-info {
-    border-top: 5px solid var(--color-info);
+    border-top: 5px solid var(--color-primary);
   }
   
   .popup-info .popup-close-button {
-    background-color: var(--color-info);
+    background-color: var(--color-primary);
   }
   
   .popup-info .popup-close-button:hover {
-    background-color: #138496;
+    background-color: #2d4a7d;
   }
   
   /* Responsive */

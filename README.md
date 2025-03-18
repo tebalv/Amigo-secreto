@@ -14,9 +14,10 @@
 1. [Contenido](#contenido)
 1. [Instalacion](#instalacion)
 1. [Tecnologia](#tecnologia)
-1. [Funciones JS](#funcionesjs)
-1. [Funciones CSS](#funcionescss)
-1. [Installing](#installing)
+1. [Funciones JS](#funciones-js)
+1. [Funciones CSS](#funciones-css)
+1. [Screenshots](#screenshots)
+1. [Actualizaciones](#actualizaciones)
 
 ## Introduccion
 
@@ -24,11 +25,11 @@ En este proyecto nos encargamos de resolver el Challenge del Amigo Secreto, el c
 
 ## Funcionalidades
 
-- **AGREGAR**: El usuario puede agregar nombres presionando la tecla Enter o haciendo clic en el botón 'Añadir'. Antes de agregar un nombre, se valida que el campo no esté vacío; en caso contrario, se mostrará un popup indicando que debe ingresar un valor.
-- **ELIMINAR**: En el caso de ingresar un nombre o algun otro valor incorrecto, se puede presionar el boton de eliminar para borrar dicho dato.
-- **COMPARAR**: Se realiza una comparación para que no se puedan agregar dos nombres iguales. La misma se indica con un popup.
-- **SORTEAR**: El sorteo aleatorio se puede realizar una vez cargado minimo 5 nombres, ya que tiene una validación minima. En este caso se sortea para el primer y segundo puesto. Luego de eso ya se mostrará otro popup indicando el fin del sorteo.
-- **REINICIAR**: Por ultimo el boton de reiniciar para realizar un nuevo sorteo.
+- `AGREGAR`: El usuario puede agregar nombres presionando la tecla Enter o haciendo clic en el botón 'Añadir'. Antes de agregar un nombre, se valida que el campo no esté vacío; en caso contrario, se mostrará un popup indicando que debe ingresar un valor.
+- `ELIMINAR`: En el caso de ingresar un nombre o algun otro valor incorrecto, se puede presionar el boton de eliminar para borrar dicho dato.
+- `COMPARAR`: Se realiza una comparación para que no se puedan agregar dos nombres iguales. La misma se indica con un popup.
+- `SORTEAR`: El sorteo aleatorio se puede realizar una vez cargado minimo 5 nombres, ya que tiene una validación minima. En este caso se sortea para el primer y segundo puesto. Luego de eso ya se mostrará otro popup indicando el fin del sorteo.
+- `REINICIAR`: Por ultimo el boton de reiniciar para realizar un nuevo sorteo.
 
 ## Contenido
 - `index.html`: Archivo principal donde encontraremos la estructura de toda la pagina web.
@@ -43,7 +44,23 @@ Puedes descargar todo el repositorio como archivo `.zip` o clonarlo:
 git clone https://github.com/tebalv/Amigo-secreto.git
 ```
 
-## Codigo
+## Tecnologia
+**HTML5**: 📜 Estructura semántica del documento con elementos modernos como `<header>`, `<section>`, y atributos de accesibilidad ARIA para garantizar una experiencia inclusiva para todos los usuarios.
+
+**CSS3**: 🎨 Diseño visual sofisticado implementando:
+- Variables CSS personalizadas para una paleta de colores consistente
+- Flexbox para layouts responsivos y centrados
+- Transiciones y animaciones para mejorar la experiencia de usuario
+- Media queries para adaptación perfecta a dispositivos móviles y de escritorio
+- Efectos visuales sutiles como sombras y transformaciones
+
+**JavaScript**: ⚡ Programación interactiva del lado del cliente que incluye:
+- Manipulación dinámica del DOM para crear y actualizar elementos
+- Sistema de validación para prevenir entradas duplicadas
+- Algoritmo de selección aleatoria con prevención de repeticiones
+- Gestión de eventos para interacciones de usuario (clicks, teclas)
+- Sistema de notificaciones mediante ventanas emergentes personalizadas
+
 ## Funciones JS
   - `mostrarPopup(mensaje, tipo = "info")`: Es responsable de crear y mostrar ventanas emergentes (popups) en la aplicación. Crea dinámicamente un overlay, un contenedor, el mensaje y un botón de cierre.
   - `agregarAmigo()`: Se encarga de añadir un nuevo participante a la lista del sorteo. Obtiene el nombre del input, valida que no esté vacío y que no exista ya en la lista, lo añade al array de amigos, actualiza la lista visual y limpia el campo de entrada.
@@ -63,6 +80,16 @@ git clone https://github.com/tebalv/Amigo-secreto.git
   - `.button-add | .icon-button | .button-draw | .button-reset`: Define varios estilos de botones, rectangulares para acciones principales y circulares con iconos para acciones secundarias. Incluye efectos hover y active para mejorar la interactividad.
   - `.tooltip`: Implementa tooltips personalizados que aparecen al pasar el cursor sobre elementos, usando posicionamiento absoluto, transiciones de opacidad y un pequeño triángulo decorativo con CSS. (Esta opcion se utiliza en los botones de reinicio y sorteo)
   - `.name-list | .result-list`: Estiliza las listas de nombres y resultados con espaciado consistente, eliminando los marcadores de lista predeterminados y añadiendo efectos hover para mejorar la interactividad.
-  - ``
-  - ``
-  - ``
+  - `.name-item-container`: Usa flexbox para crear una disposición horizontal con justificación entre elementos, permitiendo que el nombre y el botón de eliminar estén en extremos opuestos.
+  - `.delete-button`: Crea botones minimalistas sin fondo ni borde, con efecto de escala al pasar el cursor para mejorar la interactividad.
+  - `.resultado-primer-lugar | .resultado-segundo-lugar`: Diferencia visualmente los resultados del primer y segundo lugar usando diferentes colores, tamaños y pesos de fuente.
+  - `.popup-overlay | .popup-container | .popup-content`: Implementa un sistema completo de ventanas emergentes con fondo semitransparente, contenedor central, animación de entrada y diferentes estilos según el tipo de mensaje.
+  - `@keyframes popup-appear`: Utiliza animaciones CSS para crear una entrada suave de los popups, combinando cambios de opacidad y transformación.
+  - `@media`: Implementa un diseño adaptable que ajusta tamaños, márgenes y rellenos para pantallas pequeñas (menos de 600px de ancho), asegurando una buena experiencia en dispositivos móviles.
+
+## Actualizaciones
+-Pendiente realizar mas verificaciones de lo que se ingresa en el input box, como por ejemplo que no admita numeros ni simbolos.
+
+## Screenshots
+![Funcionamiento](https://tebalv.github.io/Amigo-secreto/screenshots/Funcionamiento-principal.gif)
+

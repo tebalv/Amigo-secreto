@@ -11,7 +11,7 @@
 
 1. [Introduccion](#introduccion)
 1. [Funcionalidades](#funcionalidades)
-1. [Contenido](#contenido)
+1. [Recursos](#recursos)
 1. [Instalacion](#instalacion)
 1. [Tecnologia](#tecnologia)
 1. [Funciones JS](#funciones-js)
@@ -33,7 +33,7 @@ En este proyecto nos encargamos de resolver el Challenge del Amigo Secreto, el c
 - `SORTEAR`: El sorteo aleatorio se puede realizar una vez cargado minimo 5 nombres, ya que tiene una validación minima. En este caso se sortea para el primer y segundo puesto. Luego de eso ya se mostrará otro popup indicando el fin del sorteo.
 - `REINICIAR`: Por ultimo el boton de reiniciar para realizar un nuevo sorteo.
 
-## Contenido
+## Recursos
 - `index.html`: Archivo principal donde encontraremos la estructura de toda la pagina web.
 - `app.js`: En este archivo encontraremos toda la logica de programación que hace funcionar el sorteo.
 - `style.css`: Archivo de estilos, aquí encontraremos los estilos de todos los elementos que se utilizan en la pagina. 

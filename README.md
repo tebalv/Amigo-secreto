@@ -18,6 +18,8 @@
 1. [Funciones CSS](#funciones-css)
 1. [Screenshots](#screenshots)
 1. [Actualizaciones](#actualizaciones)
+1. [Licencia](#licencia)
+1. [Contacto](#contacto)
 
 ## Introduccion
 
@@ -87,9 +89,25 @@ git clone https://github.com/tebalv/Amigo-secreto.git
   - `@keyframes popup-appear`: Utiliza animaciones CSS para crear una entrada suave de los popups, combinando cambios de opacidad y transformación.
   - `@media`: Implementa un diseño adaptable que ajusta tamaños, márgenes y rellenos para pantallas pequeñas (menos de 600px de ancho), asegurando una buena experiencia en dispositivos móviles.
 
+## Screenshots
+***Funcionamiento general***
+![Funcionamiento](https://tebalv.github.io/Amigo-secreto/screenshots/Funcionamiento-principal.gif)
+
+***Errores al tipear en el textbox***
+![Errores](screenshots/Prueba-errores.gif)
+
+***Funcionalidades con mouseover***
+![Mouseover](screenshots/Mouseovers.gif)
+
+***Fin del sorteo***
+![FinSorteo](screenshots/Fin-sorteo.gif)
+
 ## Actualizaciones
 -Pendiente realizar mas verificaciones de lo que se ingresa en el input box, como por ejemplo que no admita numeros ni simbolos.
 
-## Screenshots
-![Funcionamiento](https://tebalv.github.io/Amigo-secreto/screenshots/Funcionamiento-principal.gif)
+## Licencia
+Proyecto creado bajo licencia educativa de ALURA LATAM | ORACLE ONE. 
+Fines didacticos.
 
+## Contacto
+[<img align="left" src="screenshots/linkedin.png" alt="drawing" width="25"/>](https://www.linkedin.com/in/tebalv/)
